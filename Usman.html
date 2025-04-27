@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Usman Sheikh - Freelancer</title>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Loading screen */
+    #loading {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      z-index: 9999;
+      transition: opacity 1s ease, visibility 1s ease;
+    }
+    #loading.fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    /* Body */
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #8B0000, #000000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      padding: 20px;
+    }
+
+    /* Glass Container */
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+      text-align: center;
+      animation: fadeIn 2s ease;
+      width: 100%;
+      max-width: 450px;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: white;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #ffcccc;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      color: white;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      transition: all 0.4s ease;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+
+    .buttons a:hover {
+      background: white;
+      color: #8B0000;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px white, 0 0 40px rgba(255,255,255,0.5);
+    }
+
+    /* Background animation */
+    .bg-animation {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.07) 0%, transparent 70%);
+      animation: spin 60s linear infinite;
+      z-index: 1;
+    }
+
+    /* Keyframes */
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.1rem;
+      }
+      .buttons a {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Loading screen -->
+  <div id="loading">
+    Entering the World of Usman Sheikh...
+  </div>
+
+  <div class="bg-animation"></div>
+
+  <div class="container">
+    <h1>Usman Sheikh</h1>
+    <h2>Freelancer</h2>
+    <div class="buttons">
+      <a href="https://www.facebook.com/usmanshyykh/" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
+      <a href="https://www.instagram.com/usmanshyykh/" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a href="https://www.linkedin.com/in/usmanshyykh/" target="_blank">
+        <i class="fab fa-linkedin-in"></i> LinkedIn
+      </a>
+      <a href="https://x.com/SolHodlix" target="_blank">
+        <i class="fab fa-x-twitter"></i> Twitter X
+      </a>
+      <a href="https://www.threads.com/@usmanshyykh" target="_blank">
+        <i class="fab fa-threads"></i> Threads
+      </a>
+    </div>
+  </div>
+
+  <script>
+    // Fade out the loading screen
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('loading');
+      loader.classList.add('fade-out');
+    });
+  </script>
+
+</body>
+</html>
